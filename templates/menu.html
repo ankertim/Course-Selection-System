@@ -23,14 +23,14 @@
     <h2 style="text-align:center">{{nid}}的總表搜尋</h2>
 
 	<script>
-	dept=new Array();
-	dept[0]=["總表"]
-	dept[1]=["企管一甲", "企管一乙", "企管二甲", "企管二乙", "企管三甲", "企管三乙", "企管四甲", "企管四乙","企管碩一"];
-	dept[2]=["通識－社會整合(SB)", "通識－人文(H)", "通識－自然(N)", "通識－社會(S)", "通識－統合(M)", "通識－人文(夜)(H)", "通識－自然(夜)(N)", "通識－社會(夜)(S)", "通識－統合(夜)(M)"];
-	dept[3]=["資訊一甲", "資訊一乙", "資訊一丙", "資訊二甲", "資訊二乙", "資訊二丙", "資訊二丁", "資訊三甲", "資訊三乙", "資訊三丙", "資訊三丁", "資訊碩一", "資訊碩二", "電腦系統學程資訊三", "軟體工程學程資訊三", "網路與資安學程資訊三", "資訊跨域學程資訊三"];
+	dept = new Array();
+	dept[0] = ["總表"]
+	dept[1] = ["企管一甲", "企管一乙", "企管二甲", "企管二乙", "企管三甲", "企管三乙", "企管四甲", "企管四乙","企管碩一"];
+	dept[2] = ["通識－社會整合(SB)", "通識－人文(H)", "通識－自然(N)", "通識－社會(S)", "通識－統合(M)", "通識－人文(夜)(H)", "通識－自然(夜)(N)", "通識－社會(夜)(S)", "通識－統合(夜)(M)"];
+	dept[3] = ["資訊一甲", "資訊一乙", "資訊一丙", "資訊二甲", "資訊二乙", "資訊二丙", "資訊二丁", "資訊三甲", "資訊三乙", "資訊三丙", "資訊三丁", "資訊碩一", "資訊碩二", "電腦系統學程資訊三", "軟體工程學程資訊三", "網路與資安學程資訊三", "資訊跨域學程資訊三"];
 	
-	function renew(index){
-		for(var i=0;i<dept[index].length;i++)
+	function renew(index) {
+		for(var i = 0; i < dept[index].length; i++)
 			document.myForm.c2.options[i] = new Option(dept[index][i]);	// 設定新選項
 		document.myForm.c2.length = dept[index].length;	// 刪除多餘的選項
 	}
@@ -38,10 +38,10 @@
 	<!-- Navigation -->
 	<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:#ebebe3;">
 		<div class="container">
-			<img src="{{ url_for('static',filename='fcu_logo.jpg') }}" alt="fcu_logo" style="width: 200px; height:60px; display:block; margin:auto;">
+			<img src="{{ url_for('static', filename='fcu_logo.jpg') }}" alt="fcu_logo" style="width: 200px; height:60px; display:block; margin:auto;">
 		  <div style="margin-left:50px; font-size:20px">{{nid}}的總表搜尋</div>
-		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
-			aria-expanded="false" aria-label="Toggle navigation">
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" 
+		   aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		  </button>
 
